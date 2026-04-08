@@ -4,34 +4,35 @@
 <meta charset="UTF-8">
 <title>Peeraphat Naweesatian | Engineering Portal</title>
 
-<!-- ✅ Google Fonts (เดิม – แก้ให้ถูกต้อง) -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- ✅ AOS (Animation เดิม) -->
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- AOS Animation -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-/* ===== Global ===== */
-body {
-  margin: 0;
-  font-family: 'Inter','Noto Sans Thai',sans-serif;
+body{
+  margin:0;
+  font-family:'Inter','Noto Sans Thai',sans-serif;
   background:#f5f7fa;
   color:#333;
 }
-h1,h2,h3 { font-weight:600; margin:0; }
+h1,h2,h3{margin:0;font-weight:600}
 
-/* ===== Header ===== */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #0b3c5d;
-  color: white;
-  z-index: 1000;
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#0b3c5d;
+  color:white;
+  z-index:1000;
 }
-.nav-inner {
+.nav-inner{
   max-width:1200px;
   margin:auto;
   padding:16px 24px;
@@ -39,20 +40,18 @@ header {
   justify-content:space-between;
   align-items:center;
 }
-.nav-title { font-size:20px; }
-.nav-sub { font-size:13px; opacity:.85; }
-
-nav a {
+.nav-title{font-size:20px}
+.nav-sub{font-size:13px;opacity:.85}
+nav a{
   color:white;
   margin-left:24px;
   text-decoration:none;
   font-size:14px;
 }
-nav a:hover { text-decoration:underline; }
+nav a:hover{text-decoration:underline}
 
-/* ===== HERO ===== */
-.hero {
-  position: relative;
+.hero{
+  position:relative;
   height:100vh;
   padding-top:90px;
   display:flex;
@@ -60,78 +59,71 @@ nav a:hover { text-decoration:underline; }
   color:white;
   overflow:hidden;
 }
-
-/* ✅ พื้นหลัง IC + อนิเมชันชัดขึ้น */
-.hero::before {
+.hero::before{
   content:"";
   position:absolute;
   inset:0;
   background:
-    linear-gradient(rgba(11,60,93,0.72),rgba(11,60,93,0.72)),
-    url("ic-chip.jpg") center / 130% no-repeat;
-  animation: heroMotion 22s ease-in-out infinite;
+    linear-gradient(rgba(11,60,93,.72),rgba(11,60,93,.72)),
+    url("ic-chip.jpg") center/130% no-repeat;
+  animation:heroMotion 22s ease-in-out infinite;
   z-index:-1;
 }
-
-/* ✅ Motion ชัดขึ้น แต่ยังสุภาพ */
-@keyframes heroMotion {
-  0% {
-    transform: scale(1) translate(0,0);
-    background-position: center;
-  }
-  50% {
-    transform: scale(1.08) translate(-10px,-10px);
-    background-position: center top;
-  }
-  100% {
-    transform: scale(1.05) translate(10px,10px);
-    background-position: center bottom;
-  }
+@keyframes heroMotion{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08) translate(-10px,-10px)}
+  100%{transform:scale(1.05) translate(10px,10px)}
 }
-
-.hero-inner {
+.hero-inner{
   max-width:1200px;
   margin:auto;
   padding:40px;
 }
-.hero h1 {
-  font-size:44px;
-  margin-bottom:16px;
-}
-.hero p {
-  font-size:18px;
-  max-width:620px;
-  line-height:1.6;
-}
+.hero h1{font-size:44px;margin-bottom:16px}
+.hero p{font-size:18px;max-width:720px;line-height:1.6}
 
-/* ===== Section ===== */
-section {
+section{
   max-width:1100px;
   margin:auto;
   padding:100px 40px;
 }
-.section-title {
+.section-title{
   font-size:28px;
   margin-bottom:30px;
   border-left:4px solid #0b3c5d;
   padding-left:12px;
 }
 
-/* ===== Cards ===== */
-.card-grid {
+.card-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:24px;
 }
-.card {
+.card{
   background:white;
   padding:24px;
   border-radius:6px;
   box-shadow:0 4px 12px rgba(0,0,0,.06);
 }
 
-/* ===== Footer ===== */
-footer {
+.manual-list{
+  list-style:none;
+  padding:0;
+}
+.manual-list li{
+  margin-bottom:10px;
+}
+.manual-list a{
+  text-decoration:none;
+  color:#0b3c5d;
+  font-weight:500;
+}
+.manual-list i{
+  color:#f4b400;
+  margin-right:8px;
+}
+
+footer{
   background:#0b3c5d;
   color:white;
   text-align:center;
@@ -151,7 +143,7 @@ footer {
     </div>
     <nav>
       <a href="#home">Home</a>
-      <a href="#team">Tester Team</a>
+      <a href="#tester">Tester</a>
       <a href="#backup">Backup</a>
       <a href="#monitor">Monitor</a>
     </nav>
@@ -160,51 +152,80 @@ footer {
 
 <section class="hero" id="home">
   <div class="hero-inner" data-aos="fade-right">
-    <h1>Engineering Ownership</h1>
+    <h1>Test Equipment Engineering</h1>
     <p>
-      Responsible for test equipment ownership, tester capability,
-      system stability, and production support through structured
-      engineering practices in IC testing operations.
+      Responsible for test equipment ownership, tester capability, system stability,
+      and production support through structured engineering practices and maintenance
+      in IC testing operations.
     </p>
   </div>
 </section>
 
-<section id="team">
-  <div class="section-title" data-aos="fade-up">Tester Team</div>
+<section id="tester">
+  <div class="section-title" data-aos="fade-up">Tester</div>
+
   <div class="card-grid">
+
     <div class="card" data-aos="fade-up">
-      <h3>Tester Engineer</h3>
-      <p><b>Equipment:</b> ICT / FCT</p>
-      <p><b>Focus:</b> Debug, Failure Analysis, Stability</p>
+      <h3>Tester Model</h3>
+      <ul>
+        <li>DIAMONDX (DMDX)</li>
+        <li>HVTS / SAH (HL)</li>
+        <li>PYPG</li>
+        <li>CRAFT</li>
+        <li>CHROMA (1901K / 3380P)</li>
+        <li>QT4100A</li>
+        <li>FTI1000</li>
+        <li>VLCT</li>
+        <li>MAGNUMV</li>
+        <li>GT7</li>
+        <li>CTA8290D</li>
+        <li>GUTSHIPOT</li>
+        <li>ADVT5365</li>
+        <li>ADVT5371</li>
+        <li>ADVT6573</li>
+        <li>ADVT6575</li>
+        <li>ADVT6577</li>
+      </ul>
     </div>
+
     <div class="card" data-aos="fade-up" data-aos-delay="150">
-      <h3>Tester Technician</h3>
-      <p><b>Equipment:</b> Functional Test</p>
-      <p><b>Focus:</b> Operation, Production Support</p>
+      <h3>Manual</h3>
+      <ul class="manual-list">
+        <li><a href="manuals/DIAMONDX_DMDX/"><i class="fa-solid fa-folder"></i>DIAMONDX (DMDX)</a></li>
+        <li><a href="manuals/HVTS_SAH_HL/"><i class="fa-solid fa-folder"></i>HVTS / SAH (HL)</a></li>
+        <li><a href="manuals/PYPG/"><i class="fa-solid fa-folder"></i>PYPG</a></li>
+        <li><a href="manuals/CRAFT/"><i class="fa-solid fa-folder"></i>CRAFT</a></li>
+        <li><a href="manuals/CHROMA_1901K_3380P/"><i class="fa-solid fa-folder"></i>CHROMA 1901K / 3380P</a></li>
+        <li><a href="manuals/QT4100A/"><i class="fa-solid fa-folder"></i>QT4100A</a></li>
+        <li><a href="manuals/FTI1000/"><i class="fa-solid fa-folder"></i>FTI1000</a></li>
+        <li><a href="manuals/VLCT/"><i class="fa-solid fa-folder"></i>VLCT</a></li>
+        <li><a href="manuals/MAGNUMV/"><i class="fa-solid fa-folder"></i>MAGNUMV</a></li>
+        <li><a href="manuals/GT7/"><i class="fa-solid fa-folder"></i>GT7</a></li>
+        <li><a href="manuals/CTA8290D/"><i class="fa-solid fa-folder"></i>CTA8290D</a></li>
+        <li><a href="manuals/GUTSHIPOT/"><i class="fa-solid fa-folder"></i>GUTSHIPOT</a></li>
+        <li><a href="manuals/ADVT5365/"><i class="fa-solid fa-folder"></i>ADVT5365</a></li>
+        <li><a href="manuals/ADVT5371/"><i class="fa-solid fa-folder"></i>ADVT5371</a></li>
+        <li><a href="manuals/ADVT6573/"><i class="fa-solid fa-folder"></i>ADVT6573</a></li>
+        <li><a href="manuals/ADVT6575/"><i class="fa-solid fa-folder"></i>ADVT6575</a></li>
+        <li><a href="manuals/ADVT6577/"><i class="fa-solid fa-folder"></i>ADVT6577</a></li>
+      </ul>
     </div>
+
   </div>
 </section>
 
 <section id="backup">
   <div class="section-title" data-aos="fade-up">Backup Responsibility</div>
-  <div class="card-grid">
-    <div class="card" data-aos="fade-up">
-      <ul>
-        <li>Tester Program Backup</li>
-        <li>Golden Unit</li>
-        <li>PC / OS Image</li>
-        <li>Configuration & License</li>
-      </ul>
-    </div>
-  </div>
+  <div class="card">Tester Program, OS Image, Configuration & License Backup</div>
 </section>
 
 <section id="monitor">
   <div class="section-title" data-aos="fade-up">Real‑Time Monitor (Concept)</div>
   <div class="card-grid">
-    <div class="card" data-aos="fade-up">✅ Tester‑01 : Running</div>
-    <div class="card" data-aos="fade-up" data-aos-delay="120">⚠ Tester‑02 : Downtime</div>
-    <div class="card" data-aos="fade-up" data-aos-delay="240">🔧 Tester‑03 : Maintenance</div>
+    <div class="card">✅ Running</div>
+    <div class="card">⚠ Downtime</div>
+    <div class="card">🔧 Maintenance</div>
   </div>
 </section>
 
@@ -212,14 +233,11 @@ footer {
   © 2026 Peeraphat Naweesatian | Engineering Internal Portal
 </footer>
 
-<!-- ✅ AOS Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({
-  duration: 1000,
-  once: true
-});
+AOS.init({duration:1000, once:true});
 </script>
 
 </body>
 </html>
+``
