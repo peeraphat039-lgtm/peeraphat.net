@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <title>Peeraphat Naweesatian | Engineering Portal</title>
 
-<!-- ===== Google Fonts ===== -->
+<!-- ✅ Google Fonts (เดิม – แก้ให้ถูกต้อง) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- ===== AOS Animation ===== -->
+<!-- ✅ AOS (Animation เดิม) -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
@@ -22,91 +22,95 @@ body {
 }
 h1,h2,h3 { font-weight:600; margin:0; }
 
-/* ===== Navigation ===== */
+/* ===== Header ===== */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: #0b3c5d;
-  color: #fff;
+  color: white;
   z-index: 1000;
 }
-.nav-inner{
+.nav-inner {
   max-width:1200px;
   margin:auto;
   padding:16px 24px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 }
-.nav-title{ font-size:20px; }
-.nav-sub{ font-size:13px; opacity:.85; }
-nav a{
-  color:#fff;
+.nav-title { font-size:20px; }
+.nav-sub { font-size:13px; opacity:.85; }
+
+nav a {
+  color:white;
   margin-left:24px;
   text-decoration:none;
   font-size:14px;
 }
-nav a:hover{ text-decoration:underline; }
+nav a:hover { text-decoration:underline; }
 
 /* ===== HERO ===== */
-.hero{
+.hero {
   position: relative;
   height:100vh;
-  overflow:hidden;
+  padding-top:90px;
   display:flex;
   align-items:center;
   color:white;
-  padding-top:90px;
+  overflow:hidden;
 }
 
-/* IC / Semiconductor Background + Animation */
-.hero::before{
+/* ✅ พื้นหลัง IC + อนิเมชันชัดขึ้น */
+.hero::before {
   content:"";
   position:absolute;
   inset:0;
   background:
-    linear-gradient(rgba(11,60,93,.68),rgba(11,60,93,.68)),
-    url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1600&q=80")
-    center / 120% no-repeat;
-  animation: heroMotion 24s ease-in-out infinite alternate;
+    linear-gradient(rgba(11,60,93,0.72),rgba(11,60,93,0.72)),
+    url("ic-chip.jpg") center / 130% no-repeat;
+  animation: heroMotion 22s ease-in-out infinite;
   z-index:-1;
 }
 
-/* Subtle corporate motion */
+/* ✅ Motion ชัดขึ้น แต่ยังสุภาพ */
 @keyframes heroMotion {
-  from {
-    background-position:center;
-    transform:scale(1);
+  0% {
+    transform: scale(1) translate(0,0);
+    background-position: center;
   }
-  to {
-    background-position:center top;
-    transform:scale(1.06);
+  50% {
+    transform: scale(1.08) translate(-10px,-10px);
+    background-position: center top;
+  }
+  100% {
+    transform: scale(1.05) translate(10px,10px);
+    background-position: center bottom;
   }
 }
 
-.hero-inner{
+.hero-inner {
   max-width:1200px;
   margin:auto;
   padding:40px;
 }
-.hero h1{
+.hero h1 {
   font-size:44px;
   margin-bottom:16px;
 }
-.hero p{
+.hero p {
   font-size:18px;
   max-width:620px;
   line-height:1.6;
 }
 
 /* ===== Section ===== */
-section{
+section {
   max-width:1100px;
   margin:auto;
   padding:100px 40px;
 }
-.section-title{
+.section-title {
   font-size:28px;
   margin-bottom:30px;
   border-left:4px solid #0b3c5d;
@@ -114,12 +118,12 @@ section{
 }
 
 /* ===== Cards ===== */
-.card-grid{
+.card-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:24px;
 }
-.card{
+.card {
   background:white;
   padding:24px;
   border-radius:6px;
@@ -127,7 +131,7 @@ section{
 }
 
 /* ===== Footer ===== */
-footer{
+footer {
   background:#0b3c5d;
   color:white;
   text-align:center;
@@ -139,7 +143,6 @@ footer{
 
 <body>
 
-<!-- ===== NAV ===== -->
 <header>
   <div class="nav-inner">
     <div>
@@ -155,7 +158,6 @@ footer{
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
 <section class="hero" id="home">
   <div class="hero-inner" data-aos="fade-right">
     <h1>Engineering Ownership</h1>
@@ -167,7 +169,6 @@ footer{
   </div>
 </section>
 
-<!-- ===== TEAM ===== -->
 <section id="team">
   <div class="section-title" data-aos="fade-up">Tester Team</div>
   <div class="card-grid">
@@ -184,7 +185,6 @@ footer{
   </div>
 </section>
 
-<!-- ===== BACKUP ===== -->
 <section id="backup">
   <div class="section-title" data-aos="fade-up">Backup Responsibility</div>
   <div class="card-grid">
@@ -199,7 +199,6 @@ footer{
   </div>
 </section>
 
-<!-- ===== MONITOR ===== -->
 <section id="monitor">
   <div class="section-title" data-aos="fade-up">Real‑Time Monitor (Concept)</div>
   <div class="card-grid">
@@ -209,17 +208,16 @@ footer{
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 Peeraphat Naweesatian | Engineering Internal Portal
 </footer>
 
-<!-- ===== AOS ===== -->
+<!-- ✅ AOS Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({
-  duration:1000,
-  once:true
+  duration: 1000,
+  once: true
 });
 </script>
 
