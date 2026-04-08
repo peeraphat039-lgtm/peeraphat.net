@@ -1,145 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Peeraphat – Engineering Portal</title>
+<meta charset="UTF-8">
+<title>Peeraphat Naweesatian | Engineering Portal</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
+<!-- ===== Google Fonts ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', 'Noto Sans Thai', Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-    }
+<!-- ===== AOS Animation ===== -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.3px;
-    }
+<style>
+/* ===== Global ===== */
+body {
+  margin: 0;
+  font-family: 'Inter','Noto Sans Thai',sans-serif;
+  background:#f5f7fa;
+  color:#333;
+}
+h1,h2,h3 { font-weight:600; margin:0; }
 
-    header {
-      background: #0b3c5d;
-      color: white;
-      padding: 20px;
-    }
+/* ===== Navigation ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0b3c5d;
+  color: #fff;
+  z-index: 1000;
+}
+.nav-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-title{ font-size:20px; }
+.nav-sub{ font-size:13px; opacity:.85; }
+nav a{
+  color:#fff;
+  margin-left:24px;
+  text-decoration:none;
+  font-size:14px;
+}
+nav a:hover{ text-decoration:underline; }
 
-    nav a {
-      color: white;
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      cursor: pointer;
-    }
+/* ===== HERO ===== */
+.hero{
+  position: relative;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  color:white;
+  padding-top:90px;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+/* IC / Semiconductor Background + Animation */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(11,60,93,.68),rgba(11,60,93,.68)),
+    url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1600&q=80")
+    center / 120% no-repeat;
+  animation: heroMotion 24s ease-in-out infinite alternate;
+  z-index:-1;
+}
 
-    section {
-      display: none;
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* Subtle corporate motion */
+@keyframes heroMotion {
+  from {
+    background-position:center;
+    transform:scale(1);
+  }
+  to {
+    background-position:center top;
+    transform:scale(1.06);
+  }
+}
 
-    section.active {
-      display: block;
-    }
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:40px;
+}
+.hero h1{
+  font-size:44px;
+  margin-bottom:16px;
+}
+.hero p{
+  font-size:18px;
+  max-width:620px;
+  line-height:1.6;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 5px solid #0b3c5d;
-    }
+/* ===== Section ===== */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:100px 40px;
+}
+.section-title{
+  font-size:28px;
+  margin-bottom:30px;
+  border-left:4px solid #0b3c5d;
+  padding-left:12px;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      color: #666;
-    }
-  </style>
+/* ===== Cards ===== */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.card{
+  background:white;
+  padding:24px;
+  border-radius:6px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll("section").forEach(sec => {
-        sec.classList.remove("active");
-      });
-      document.getElementById(id).classList.add("active");
-    }
-  </script>
+/* ===== Footer ===== */
+footer{
+  background:#0b3c5d;
+  color:white;
+  text-align:center;
+  padding:24px;
+  font-size:13px;
+}
+</style>
 </head>
 
 <body>
 
+<!-- ===== NAV ===== -->
 <header>
-  <h1>Peeraphat Naweesatian</h1>
-  <p>Equipment Engineer A | UTL</p>
-
-  <nav>
-    <a onclick="showSection('home')">Home</a>
-    <a onclick="showSection('team')">Tester Team</a>
-    <a onclick="showSection('backup')">Backup Info</a>
-    <a onclick="showSection('monitor')">Real-Time Monitor</a>
-  </nav>
+  <div class="nav-inner">
+    <div>
+      <div class="nav-title">Peeraphat Naweesatian</div>
+      <div class="nav-sub">Equipment Engineer A | UTL</div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#team">Tester Team</a>
+      <a href="#backup">Backup</a>
+      <a href="#monitor">Monitor</a>
+    </nav>
+  </div>
 </header>
 
-<section id="home" class="active">
-  <div class="card">
-    <h2>Engineering Ownership</h2>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-inner" data-aos="fade-right">
+    <h1>Engineering Ownership</h1>
     <p>
       Responsible for test equipment ownership, tester capability,
-      system stability, and production support.
+      system stability, and production support through structured
+      engineering practices in IC testing operations.
     </p>
   </div>
 </section>
 
+<!-- ===== TEAM ===== -->
 <section id="team">
-  <div class="card">
-    <h2>Tester Engineer</h2>
-    <p>Equipment: ICT / FCT</p>
-    <p>Skill: Debug, Script, Failure Analysis</p>
-  </div>
-
-  <div class="card">
-    <h2>Tester Technician</h2>
-    <p>Equipment: Functional Test</p>
-    <p>Skill: Operation, Support Production</p>
+  <div class="section-title" data-aos="fade-up">Tester Team</div>
+  <div class="card-grid">
+    <div class="card" data-aos="fade-up">
+      <h3>Tester Engineer</h3>
+      <p><b>Equipment:</b> ICT / FCT</p>
+      <p><b>Focus:</b> Debug, Failure Analysis, Stability</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="150">
+      <h3>Tester Technician</h3>
+      <p><b>Equipment:</b> Functional Test</p>
+      <p><b>Focus:</b> Operation, Production Support</p>
+    </div>
   </div>
 </section>
 
+<!-- ===== BACKUP ===== -->
 <section id="backup">
-  <div class="card">
-    <h2>System Backup Responsibility</h2>
-    <ul>
-      <li>Tester Program Backup – Weekly</li>
-      <li>Golden Unit Image</li>
-      <li>PC / OS Image</li>
-      <li>Network Config & License</li>
-    </ul>
+  <div class="section-title" data-aos="fade-up">Backup Responsibility</div>
+  <div class="card-grid">
+    <div class="card" data-aos="fade-up">
+      <ul>
+        <li>Tester Program Backup</li>
+        <li>Golden Unit</li>
+        <li>PC / OS Image</li>
+        <li>Configuration & License</li>
+      </ul>
+    </div>
   </div>
 </section>
 
+<!-- ===== MONITOR ===== -->
 <section id="monitor">
-  <div class="card">
-    <h2>Tester Status Monitoring</h2>
-    <ul>
-      <li>Tester‑01 : ✅ Running</li>
-      <li>Tester‑02 : ⚠ Downtime</li>
-      <li>Tester‑03 : 🔧 Maintenance</li>
-    </ul>
+  <div class="section-title" data-aos="fade-up">Real‑Time Monitor (Concept)</div>
+  <div class="card-grid">
+    <div class="card" data-aos="fade-up">✅ Tester‑01 : Running</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="120">⚠ Tester‑02 : Downtime</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="240">🔧 Tester‑03 : Maintenance</div>
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2026 Peeraphat Naweesatian | Engineering Internal Portal
 </footer>
+
+<!-- ===== AOS ===== -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration:1000,
+  once:true
+});
+</script>
 
 </body>
 </html>
