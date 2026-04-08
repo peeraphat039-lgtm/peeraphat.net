@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Peeraphat – Engineering Portal</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* ===== TOP BAR ===== */
+header {
+  background: #0b3c5d;
+  color: white;
+  padding: 20px;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== CONTENT ===== */
+section {
+  display: none;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0b3c5d;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #666;
+}
+</style>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.remove("active");
+  });
+  document.getElementById(id).classList.add("active");
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>Peeraphat Naweesatian</h1>
+  <p>Equipment Engineer A | UTL</p>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('team')">Tester Team</a>
+    <a onclick="showSection('backup')">Backup Info</a>
+    <a onclick="showSection('monitor')">Real‑Time Monitor</a>
+  </nav>
+</header>
+<section id="home" class="active">
+  <div class="card">
+    <h2>Engineering Ownership</h2>
+    <p>
+      Responsible for test equipment ownership, tester capability,
+      system stability, and production support.
+    </p>
+  </div>
+</section>
+<section id="team">
+  <div class="card">
+    <h2>Tester Engineer</h2>
+    <p>Equipment: ICT / FCT</p>
+    <p>Skill: Debug, Script, Failure Analysis</p>
+  </div>
+
+  <div class="card">
+    <h2>Tester Technician</h2>
+    <p>Equipment: Functional Test</p>
+    <p>Skill: Operation, Support Production</p>
+  </div>
+</section>
+<section id="backup">
+  <div class="card">
+    <h2>System Backup Responsibility</h2>
+    <ul>
+      <li>Tester Program Backup – Weekly</li>
+      <li>Golden Unit Image</li>
+      <li>PC / OS Image</li>
+      <li>Network Config & License</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p>
+      Backup data is maintained according to internal engineering standard
+      to ensure recovery readiness.
+    </p>
+  </div>
+</section>
+<section id="monitor">
+  <div class="card">
+    <h2>Tester Status Monitoring</h2>
+    <ul>
+      <li>Tester‑01 : ✅ Running</li>
+      <li>Tester‑02 : ⚠ Downtime</li>
+      <li>Tester‑03 : 🔧 Maintenance</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p>
+      Real‑time monitoring data can be integrated with MES / Log system
+      in future phase.
+    </p>
+  </div>
+</section>
+<footer>
+© 2026 Peeraphat Naweesatian | Engineering Internal Portal
+</footer>
+
+</body>
+</html>
+
