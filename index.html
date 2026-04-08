@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Peeraphat – Engineering Portal</title>
+  <meta charset="UTF-8">
+  <title>Peeraphat – Engineering Portal</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f7fa;
-}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
 
-/* ===== TOP BAR ===== */
-header {
-  background: #0b3c5d;
-  color: white;
-  padding: 20px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Noto Sans Thai', Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
 
-nav a {
-  color: white;
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-}
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
 
-nav a:hover {
-  text-decoration: underline;
-}
+    header {
+      background: #0b3c5d;
+      color: white;
+      padding: 20px;
+    }
 
-/* ===== CONTENT ===== */
-section {
-  display: none;
-  padding: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
 
-section.active {
-  display: block;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-left: 5px solid #0b3c5d;
-}
+    section {
+      display: none;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 13px;
-  color: #666;
-}
-</style>
+    section.active {
+      display: block;
+    }
 
-<script>
-function showSection(id) {
-  document.querySelectorAll("section").forEach(sec => {
-    sec.classList.remove("active");
-  });
-  document.getElementById(id).classList.add("active");
-}
-</script>
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #0b3c5d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
 </head>
 
 <body>
@@ -77,9 +86,10 @@ function showSection(id) {
     <a onclick="showSection('home')">Home</a>
     <a onclick="showSection('team')">Tester Team</a>
     <a onclick="showSection('backup')">Backup Info</a>
-    <a onclick="showSection('monitor')">Real‑Time Monitor</a>
+    <a onclick="showSection('monitor')">Real-Time Monitor</a>
   </nav>
 </header>
+
 <section id="home" class="active">
   <div class="card">
     <h2>Engineering Ownership</h2>
@@ -89,6 +99,7 @@ function showSection(id) {
     </p>
   </div>
 </section>
+
 <section id="team">
   <div class="card">
     <h2>Tester Engineer</h2>
@@ -102,6 +113,7 @@ function showSection(id) {
     <p>Skill: Operation, Support Production</p>
   </div>
 </section>
+
 <section id="backup">
   <div class="card">
     <h2>System Backup Responsibility</h2>
@@ -112,14 +124,8 @@ function showSection(id) {
       <li>Network Config & License</li>
     </ul>
   </div>
-
-  <div class="card">
-    <p>
-      Backup data is maintained according to internal engineering standard
-      to ensure recovery readiness.
-    </p>
-  </div>
 </section>
+
 <section id="monitor">
   <div class="card">
     <h2>Tester Status Monitoring</h2>
@@ -129,18 +135,11 @@ function showSection(id) {
       <li>Tester‑03 : 🔧 Maintenance</li>
     </ul>
   </div>
-
-  <div class="card">
-    <p>
-      Real‑time monitoring data can be integrated with MES / Log system
-      in future phase.
-    </p>
-  </div>
 </section>
+
 <footer>
-© 2026 Peeraphat Naweesatian | Engineering Internal Portal
+  © 2026 Peeraphat Naweesatian | Engineering Internal Portal
 </footer>
 
 </body>
 </html>
-
