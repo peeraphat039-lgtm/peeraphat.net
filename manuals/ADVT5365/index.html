@@ -4,58 +4,164 @@
 <meta charset="UTF-8">
 <title>ADVT5365 – Manual</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* ===== Background ===== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 40px;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
   color: #333;
+  background:
+    linear-gradient(rgba(245,247,250,0.95), rgba(245,247,250,0.95)),
+    url("../../ic-chip.jpg") center / cover no-repeat;
 }
-h1 {
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 30px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #0b3c5d;
+  color: white;
+  padding: 35px 30px;
+  border-radius: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== Card ===== */
+.card {
+  margin-top: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 30px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 22px;
+  border-left: 4px solid #0b3c5d;
+  padding-left: 12px;
+}
+
+/* ===== Manual List ===== */
+.manual-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.manual-list li {
+  margin-bottom: 14px;
+}
+
+.manual-list a {
+  text-decoration: none;
   color: #0b3c5d;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
 }
-p {
-  color: #555;
+
+.manual-list a:hover {
+  text-decoration: underline;
 }
-ul {
-  line-height: 2;
+
+.icon {
+  font-size: 18px;
+  margin-right: 10px;
 }
-a {
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.back-link {
   text-decoration: none;
   color: #0b3c5d;
   font-weight: 500;
 }
-a:hover {
+
+.back-link:hover {
   text-decoration: underline;
 }
-.back {
-  margin-top: 30px;
+
+.note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #777;
 }
 </style>
-
 </head>
+
 <body>
 
-<h1>ADVT5365 – Manual</h1>
+<div class="container">
 
-<p>
-This page contains manuals and reference documents for the ADVT5365 tester.
-</p>
+  <!-- Header -->
+  <div class="header">
+    <h1>ADVT5365 – Manual</h1>
+    <p>
+      Manuals and technical reference documents for ADVT5365 test equipment
+    </p>
+  </div>
 
-<ul>
-  <li>
-    <a href="T5365-1_manual.pdf" target="_blank">
-      T5365‑1 Hardware / Operation Manual
+  <!-- Manual List -->
+  <div class="card">
+    <h2>Available Documents</h2>
+
+    <ul class="manual-list">
+      <li>
+        <a href="T5365.1_manual.pdf">
+          <span class="icon">📄</span>
+          T5365.1_manual.pdf
+        </a>
+      </li>
+
+      <li>
+        <a href="T5365_manual.pdf">
+          <span class="icon">📄</span>
+          T5365_manual.pdf
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a class="back-link" href="../../index.html">
+      ← Back to Engineering Portal
     </a>
-  </li>
-  <li>
-    <a href="T5365_manual.pdf" target="_blank">
-      T5365 Operation Manual
-    </a>
-  </li>
-</ul>
 
-<div class="back">
-  <a href="../../index.html">← Back to Main Page</a>
+    <div class="note">
+      Engineering Internal Documentation Portal
+    </div>
+  </div>
+
 </div>
 
 </body>
