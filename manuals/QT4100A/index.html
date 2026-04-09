@@ -3,174 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <title>QT4100A – Manual</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font : Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  color: #333;
+body{
+  margin:0;
+  font-family:'Inter',Arial,sans-serif;
   background:
-    linear-gradient(rgba(245,247,250,0.95), rgba(245,247,250,0.95)),
-    url("../../ic-chip.jpg") center / cover no-repeat fixed;
+    linear-gradient(rgba(245,247,250,.95),rgba(245,247,250,.95)),
+    url("../../ic-chip.jpg") center/cover no-repeat fixed;
+  color:#333;
 }
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 30px;
+.container{max-width:900px;margin:auto;padding:60px 30px;}
+.header{background:#0b3c5d;color:#fff;padding:36px 30px;border-radius:10px;}
+.card{margin-top:40px;background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:30px;}
+.manual-list{list-style:none;padding:0;margin-top:20px;}
+.manual-list li{margin-bottom:14px;}
+.manual-list a{
+  text-decoration:none;
+  color:#0b3c5d;
+  font-weight:500;
+  display:flex;
+  align-items:center;
 }
-
-.header {
-  background: #0b3c5d;
-  color: white;
-  padding: 36px 30px;
-  border-radius: 10px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 600;
-}
-
-.header p {
-  margin-top: 8px;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.card {
-  margin-top: 40px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 30px;
-}
-
-.card h2 {
-  margin-top: 0;
-  font-size: 22px;
-  border-left: 4px solid #0b3c5d;
-  padding-left: 12px;
-}
-
-.manual-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.manual-list li {
-  margin-bottom: 14px;
-}
-
-.manual-list a {
-  text-decoration: none;
-  color: #0b3c5d;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-}
-
-.manual-list a:hover {
-  text-decoration: underline;
-}
-
-.icon {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-.footer {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.back-link {
-  text-decoration: none;
-  color: #0b3c5d;
-  font-weight: 500;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-.note {
-  margin-top: 16px;
-  font-size: 12px;
-  color: #777;
-}
+.icon{margin-right:10px;}
+.footer{text-align:center;margin-top:50px;}
+.note{font-size:12px;color:#777;margin-top:16px;}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-  <!-- Header -->
-  <div class="header">
-    <h1>QT4100A – Manual</h1>
-    <p>
-      Manuals and technical reference documents for QT4100A test equipment
-    </p>
-  </div>
-
-  <!-- Manual List -->
-  <div class="card">
-    <h2>Available Documents</h2>
-
-    <ul class="manual-list">
-
-      <li>
-        QT-4100_Tester_User_manual.pdf
-          <span class="icon">📄</span>
-          QT-4100_Tester_User_manual.pdf
-        </a>
-      </li>
-
-      <li>
-        QT-3202RG_Agilent_manual.pdf
-          <span class="icon">📄</span>
-          QT-3202RG_Agilent_manual.pdf
-        </a>
-      </li>
-
-      <li>
-        EAS_Test_System_User_manual.pdf
-          <span class="icon">📄</span>
-          EAS_Test_System_User_manual.pdf
-        </a>
-      </li>
-
-    </ul>
-
-    <p class="note">
-      * Some manuals will be downloaded automatically. Please open with PDF Reader.
-    </p>
-
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    ../../index.html
-      ← Back to Engineering Portal
-    </a>
-
-    <div class="note">
-      Engineering Internal Documentation Portal
-    </div>
-  </div>
-
+<div class="header">
+  <h1>QT4100A – Manual</h1>
+  <p>Manuals and technical reference documents for QT4100A test equipment</p>
 </div>
 
+<div class="card">
+  <h2>Available Documents</h2>
+
+  <ul class="manual-list">
+    <li>
+      <a href="QT-4100_Tester_User_manual.pdf" download>
+        <span class="icon">📄</span>
+        QT-4100_Tester_User_manual.pdf
+      </a>
+    </li>
+
+    <li>
+      <a href="QT-3202RG_Agilent_manual.pdf" download>
+        <span class="icon">📄</span>
+        QT-3202RG_Agilent_manual.pdf
+      </a>
+    </li>
+
+    <li>
+      <a href="EAS_Test_System_User_manual.pdf" download>
+        <span class="icon">📄</span>
+        EAS_Test_System_User_manual.pdf
+      </a>
+    </li>
+  </ul>
+
+  <p class="note">
+    * Files will be downloaded automatically. Please open with PDF Reader.
+  </p>
+</div>
+
+<div class="footer">
+  <a href="../../index.html">← Back to Engineering Portal</a>
+</div>
+
+</div>
 </body>
 </html>
