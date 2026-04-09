@@ -44,7 +44,7 @@ body {
   opacity: 0.9;
 }
 
-/* ให้เหมือน ADVT6577 */
+/* เหมือน ADVT6577 */
 .card {
   margin-top: 40px;
   background: white;
@@ -104,7 +104,6 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
-
 .footer a:hover {
   text-decoration: underline;
 }
@@ -124,6 +123,7 @@ body {
     <h2>Available Documents</h2>
 
     <ul class="manual-list">
+      <!-- เปิดใน browser ได้ -->
       <li>
         <a href="QT-4100_Tester_User_manual.pdf" target="_blank">
           <span class="icon">📄</span>
@@ -131,15 +131,16 @@ body {
         </a>
       </li>
 
+      <!-- 2 ไฟล์นี้ให้ download -->
       <li>
-        <a href="QT-3202RG_Agilent_manual.pdf" target="_blank">
+        <a href="QT-3202RG_Agilent_manual.pdf" download>
           <span class="icon">📄</span>
           QT-3202RG_Agilent_manual.pdf
         </a>
       </li>
 
       <li>
-        <a href="EAS_Test_System_User_manual.pdf" target="_blank">
+        <a href="EAS_Test_System_User_manual.pdf" download>
           <span class="icon">📄</span>
           EAS_Test_System_User_manual.pdf
         </a>
@@ -147,7 +148,7 @@ body {
     </ul>
 
     <p class="note">
-      * Some manuals may require opening with an external PDF reader if the browser cannot render them.
+      * Some documents will be downloaded automatically due to browser PDF limitations.
     </p>
   </div>
 
@@ -160,3 +161,4 @@ body {
 
 </body>
 </html>
+``
